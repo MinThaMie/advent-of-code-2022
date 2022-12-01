@@ -38,6 +38,8 @@
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
+    "ember-code-snippet": "^3.0.0",
+    "ember-css-modules": "^2.0.1",
     "ember-data": "~4.7.1",
     "ember-fetch": "^8.1.2",
     "ember-load-initializers": "^2.1.2",
@@ -58,12 +60,15 @@
     "prettier": "^2.7.1",
     "qunit": "^2.19.1",
     "qunit-dom": "^2.0.0",
-    "webpack": "^5.74.0"
+    "webpack": "^5.75.0"
   },
   "engines": {
     "node": "14.* || >= 16"
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-prism": "^0.13.0"
   }
 }
