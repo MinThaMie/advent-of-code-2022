@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'advent-of-code-2022',
     environment,
     rootURL: '/',
-    locationType: 'history',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

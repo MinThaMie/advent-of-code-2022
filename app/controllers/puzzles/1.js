@@ -28,7 +28,6 @@ export default class Puzzles1Controller extends PuzzlesBaseController {
         winners.sort((a, b) => a - b);
       }
     });
-    console.log(winners);
     return winners.reduce(
       (accumulator, currentValue) => accumulator + currentValue
     );
