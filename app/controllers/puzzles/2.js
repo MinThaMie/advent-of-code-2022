@@ -3,28 +3,26 @@ import PuzzlesBaseController from './base';
 export default class Puzzles1Controller extends PuzzlesBaseController {
   // BEGIN-SNIPPET day2-solution1
   solve1(input) {
-    // Rock, Paper, Scissors == A,B,C == X,Y,Z
-    // Rock defeats Scissors, Scissors defeats Paper, and Paper defeats Rock.
-    let shapePoints = {
+    const shapePoints = {
       X: 1,
       Y: 2,
       Z: 3,
     };
-    let translate = {
+    const translate = {
       A: 'X',
       B: 'Y',
       C: 'Z',
     };
     let score = 0;
     input.forEach((round) => {
-      let [opp, you] = round.split(' ');
+      const [opp, you] = round.split(' ');
       if (translate[opp] == you) {
         score = score + shapePoints[you] + 3; // Draw is 3
-      } else if (you == 'X' && opp == 'C') {
-        score = score + shapePoints[you] + 6;
-      } else if (you == 'Z' && opp == 'B') {
-        score = score + shapePoints[you] + 6;
-      } else if (you == 'Y' && opp == 'A') {
+      } else if (
+        (you == 'X' && opp == 'C') ||
+        (you == 'Z' && opp == 'B') ||
+        (you == 'Y' && opp == 'A')
+      ) {
         score = score + shapePoints[you] + 6;
       } else {
         score += shapePoints[you];
@@ -36,24 +34,24 @@ export default class Puzzles1Controller extends PuzzlesBaseController {
 
   // BEGIN-SNIPPET day2-solution2
   solve2(input) {
-    let shapePoints = {
+    const shapePoints = {
       X: 1,
       Y: 2,
       Z: 3,
     };
-    let translateOpp = {
+    const translateOpp = {
       A: 'X',
       B: 'Y',
       C: 'Z',
     };
-    let translateResult = {
+    const translateResult = {
       X: 'LOSE',
       Y: 'DRAW',
       Z: 'WIN',
     };
     let score = 0;
     input.forEach((round) => {
-      let [opp, result] = round.split(' ');
+      const [opp, result] = round.split(' ');
       let you;
       switch (translateResult[result]) {
         case 'LOSE':

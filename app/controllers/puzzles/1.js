@@ -5,7 +5,7 @@ export default class Puzzles1Controller extends PuzzlesBaseController {
   solve1(input) {
     let max = 0;
     input.forEach((n) => {
-      let caloriesCarried = n.reduce(
+      const caloriesCarried = n.reduce(
         (accumulator, currentValue) => accumulator + currentValue
       );
       if (max < caloriesCarried) {
@@ -18,9 +18,9 @@ export default class Puzzles1Controller extends PuzzlesBaseController {
 
   // BEGIN-SNIPPET day1-solution2
   solve2(input) {
-    let winners = [0, 0, 0];
+    const winners = [0, 0, 0];
     input.forEach((n) => {
-      let caloriesCarried = n.reduce(
+      const caloriesCarried = n.reduce(
         (accumulator, currentValue) => accumulator + currentValue
       );
       if (winners[0] < caloriesCarried) {
