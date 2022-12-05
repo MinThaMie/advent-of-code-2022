@@ -6,10 +6,10 @@ export default class Puzzles3Route extends Route {
   }
 
   async model() {
-    let resIntro = await fetch('/inputs/day3/intro.txt');
-    let introFile = await resIntro.text();
-    let res = await fetch('/inputs/day3/full.txt');
-    let fullFile = await res.text();
+    const resIntro = await fetch('/inputs/day3/intro.txt');
+    const introFile = await resIntro.text();
+    const res = await fetch('/inputs/day3/full.txt');
+    const fullFile = await res.text();
     return {
       example: this.parseInput(introFile),
       full: this.parseInput(fullFile),
