@@ -15,5 +15,6 @@ Router.map(function () {
     this.route('5');
     this.route('6');
     this.route('7');
+    this.route('8');
   });
 });
