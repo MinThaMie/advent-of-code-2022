@@ -17,5 +17,6 @@ Router.map(function () {
     this.route('7');
     this.route('8');
     this.route('9');
+    this.route('10');
   });
 });
